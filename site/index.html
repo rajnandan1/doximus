@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/images/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content='{{index . "description"}}'>
+		<meta name="keywords" content='{{index . "tags"}}'>
+		<meta itemprop="name" content='{{index . "title"}}' />
+
+	 	<meta itemprop="image" content='{{index . "image"}}' />
+		<meta property="og:site_name" content='{{index . "title"}}' />
+		<meta property="og:image:secure_url" itemprop="image" content='{{index . "image"}}' />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" itemprop="name" content='{{index . "title"}}' />
+		<meta property="og:description" itemprop="description" content='{{index . "description"}}' />
+
+		<title>{{index . "title"}}</title>
+
+    	<!-- using online links -->
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<meta name="googlebot" content="notranslate" />
+
+		
+
+
+		<link rel="stylesheet" href="/css/main.css">
+    	<link rel="stylesheet" href="/css/sidebar-themes.css">
+    	<link rel="stylesheet" href="/css/theme.css">
+		
+
+		
+
+		<link rel="modulepreload" href="/_app/start-8a8c1eff.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-3104456f.js">
+		<link rel="modulepreload" href="/_app/chunks/singletons-12a22614.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/vendor-b5329f03.css">
+
+		<script type="module">
+			import { start } from "/_app/start-8a8c1eff.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: true,
+				trailing_slash: "never",
+				hydrate: null
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte" class="page-wrapper toggled light-theme">
+			
+
+			
+		
+		</div>
+	</body>
+</html>
