@@ -71,6 +71,9 @@ func initConfig() {
 	if !itExists("./site/files") {
 		os.Mkdir("./site/files", 0777)
 	}
+	if !itExists("./site/assets/images") {
+		os.Mkdir("./site/assets/images", 0777)
+	}
 	if !itExists("./site/site.yaml") {
 		file, err := yaml.Marshal(websiteMap)
 		throwError(err)
