@@ -42,7 +42,7 @@ doximus serve --port=4099
 - Supports examples 
 
 ## Images
-Use images folder to add your images. `favicon.ico` can be added in images folder
+Use images folder to add your images.
 ## Pages
 All pages are present in pages folder. Root of `pages` is the home / landing page
 ## Doximus CLI
