@@ -1,6 +1,8 @@
 ## Installation
 - go 1.16 minimum
 
+## [Demo](https://doximus.herokuapp.com/ "The best api documentation")
+
 ## Clone Repo
 ```
 git clone https://github.com/rajnandan1/doximus.git
