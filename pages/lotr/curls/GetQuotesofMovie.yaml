@@ -1,0 +1,2 @@
+title: Get Quotes of Movie
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/movie/:movieId/quote?offset=4&limit=3'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''

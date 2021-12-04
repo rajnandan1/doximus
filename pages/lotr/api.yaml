@@ -1,0 +1,105 @@
+title: The API
+description: Gandalf, my old friend, this will be a night to remember.
+logo: https://img.icons8.com/color/96/000000/frodo.png
+slug: ""
+id: ""
+domains:
+    - the-one-api.dev
+    - the-one-api.herokuapp.com
+configurables:
+    - title: authorization
+      description: this is api key
+      required: false
+      init: Bearer your-api-key
+apis:
+    - method: GET
+      title: Get Books
+      path: /v2/book
+      slug: ""
+      id: ""
+      logo: ""
+      description: API to fetch all books
+    - method: GET
+      title: Get Book by ID
+      path: /v2/book/:bookId
+      slug: ""
+      id: ""
+      logo: ""
+      description: API to fetch book by id
+    - method: GET
+      title: Get Chapters of a book
+      path: /v2/book/:bookId/chapter
+      slug: ""
+      id: ""
+      logo: ""
+      description: API to fetch chapters of a book
+    - method: GET
+      title: Get all Chapters
+      path: /v2/chapter
+      slug: ""
+      id: ""
+      logo: ""
+      description: API to fetch all chapters
+    - method: GET
+      title: Chapter by ID
+      path: /v2/chapter/:chapterId
+      slug: ""
+      id: ""
+      logo: ""
+      description: chapter by id
+    - method: GET
+      title: Get Characters
+      path: /v2/character
+      slug: ""
+      id: ""
+      logo: ""
+      description: see characters in lotr universe
+    - method: GET
+      title: Get Character by ID
+      path: /v2/character/:characterId
+      slug: ""
+      id: ""
+      logo: ""
+      description: details about a character
+    - method: GET
+      title: Get Quotes
+      path: /v2/character/:characterId/quote
+      slug: ""
+      id: ""
+      logo: ""
+      description: dialouges by a character
+    - method: GET
+      title: Get movies
+      path: /v2/movie
+      slug: ""
+      id: ""
+      logo: ""
+      description: Movies that were made on the books
+    - method: GET
+      title: Get movie by id
+      path: /v2/movie/:movieId
+      slug: ""
+      id: ""
+      logo: ""
+      description: Movie full details
+    - method: GET
+      title: Get Quotes of Movie
+      path: /v2/movie/:movieId/quote
+      slug: ""
+      id: ""
+      logo: ""
+      description: fetch movie quotes
+    - method: GET
+      title: Get Quotes
+      path: /v2/quote
+      slug: ""
+      id: ""
+      logo: ""
+      description: get quotes or dialouges
+    - method: GET
+      title: Get Quote by ID
+      path: /v2/quote/:quoteId
+      slug: ""
+      id: ""
+      logo: ""
+      description: get one quote

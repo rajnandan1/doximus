@@ -1,0 +1,2 @@
+title: Get Quotes
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/quote?limit=10'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''

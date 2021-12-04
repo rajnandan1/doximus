@@ -1,0 +1,2 @@
+title: Get movie by id
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/movie/:movieId'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''

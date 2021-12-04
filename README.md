@@ -39,6 +39,7 @@ doximus serve --port=4099
 - Updates all requests with same variable name. That is if an api returns suppose `user_id` it will be replaced in all subsequent requests wherever present
 - Google searchable
 - Site search
+- Supports examples 
 
 ## Images
 Use images folder to add your images. `favicon.ico` can be added in images folder
@@ -133,15 +134,15 @@ doximus add api --id=lotr --title="The API"
 ```
 add description of the api
 ```
-doximus add page --id=lotr --desc="Gandalf, my old friend, this will be a night to remember."
+doximus add api --id=lotr --desc="Gandalf, my old friend, this will be a night to remember."
 ```
 add image for the api
 ```
-doximus add page --id=lotr --logo="images/frodo.png"
+doximus add api --id=lotr --logo="https://img.icons8.com/color/96/000000/frodo.png"
 ```
 add domains for api
 ```
-doximus add page --id=lotr --domains=the-one-api.dev,goole.com
+doximus add api --id=lotr --domains=the-one-api.dev,the-one-api.herokuapp.com
 ```
 add a curl for the api
 ```

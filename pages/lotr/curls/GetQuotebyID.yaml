@@ -1,0 +1,2 @@
+title: Get Quote by ID
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/quote/:quoteId'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''

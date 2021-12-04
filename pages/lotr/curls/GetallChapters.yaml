@@ -1,0 +1,2 @@
+title: Get all Chapters
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/chapter'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''

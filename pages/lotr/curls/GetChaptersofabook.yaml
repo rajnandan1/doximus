@@ -1,0 +1,2 @@
+title: Get Chapters of a book
+curl: curl --location --request GET 'https://the-one-api.dev/v2/book/:bookId/chapter'

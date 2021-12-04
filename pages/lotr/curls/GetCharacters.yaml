@@ -1,0 +1,2 @@
+title: Get Characters
+curl: 'curl --location --request GET ''https://the-one-api.dev/v2/character?page=1&limit=5'' --header ''Authorization: Bearer IQh1aYlJbiZiBen6Fn6l'''
