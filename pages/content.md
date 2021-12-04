@@ -106,6 +106,10 @@ To create a new page with a specified id
 ```
 doximus add page --id=lotr
 ```
+**To add a subpage** 
+```
+doximus add page --id="lotr.part1"
+```
 add logo
 ```
 doximus add page --id=lotr --logo="images/legolas.png"
