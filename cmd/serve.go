@@ -18,6 +18,7 @@ package cmd
 import (
 	"doximus/utils"
 	"io"
+	"os"
 	"path/filepath"
 	"text/template"
 
@@ -52,7 +53,7 @@ var serveCmd = &cobra.Command{
 		templateDirs := []string{
 			"./site/*.html",
 		}
-
+		port = os.Getenv("PORT")
 		templateFiles := []string{}
 		for _, dir := range templateDirs {
 			ff, err := filepath.Glob(dir)
