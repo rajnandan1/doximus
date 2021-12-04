@@ -559,7 +559,7 @@ box-shadow: none !important;
 	font-family: 'Source Code Pro', monospace;
 }
 .method-POST {
-	background-color: #A6B1E1;
+	background-color: #86D7FF;
 }
 
 .method-GET {
@@ -567,11 +567,11 @@ box-shadow: none !important;
 }
 
 .method-PUT {
-	background-color: #6886C5;
+	background-color: #FECCA0;
 }
 
 .method-DELETE {
-	background-color: #FECCA0;
+	background-color: #EE7F7F;
 }
 .badge-2XX {
 	background-color: #C6EBC9;
@@ -608,7 +608,6 @@ box-shadow: none !important;
 	height: auto !important;
 	cursor: pointer;
 }
-
 .content table td,
 .content table th {
 	border: 1px solid #e2eeff;
@@ -618,5 +617,13 @@ box-shadow: none !important;
 .content table tr:nth-child(even) {
 	background-color: #F3F8FF;
 }
-
- 
+.light-theme .sidebar-wrapper .sidebar-footer{
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	font-size: 12px;
+	text-align: left;
+}
+.sidebar-wrapper .sidebar-menu ul li a.noimage{
+	padding-left: 15px !important;
+}

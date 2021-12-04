@@ -16,7 +16,11 @@ limitations under the License.
 package cmd
 
 import (
+	"doximus/utils"
 	"io/ioutil"
+	"os"
+	"path/filepath"
+	"strings"
 
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
@@ -29,20 +33,24 @@ var pagesCmd = &cobra.Command{
 	Long:  `The pages command will scan a folder when you build to create the pages. It has to have at least one main file which becomes your home page`,
 	Run: func(cmd *cobra.Command, args []string) {
 
-		if len(args) == 0 {
-			return
-		}
-		title := args[0]
 		dat, err := ioutil.ReadFile("./site/site.yaml")
-		throwError(err)
-		var websiteMap = Website{}
+		utils.ThrowError(err)
+		var websiteMap = utils.Website{}
 		err = yaml.Unmarshal(dat, &websiteMap)
-		throwError(err)
-		websiteMap.Pages = title
-		file, err := yaml.Marshal(websiteMap)
-		throwError(err)
-		err = ioutil.WriteFile("./site/site.yaml", file, 0777)
-		throwError(err)
+		utils.ThrowError(err)
+
+		files, err := filepath.Glob(websiteMap.Pages + "/*")
+		utils.ThrowError(err)
+		utils.ThrowSuccess("Your pages")
+		utils.ThrowLog("home")
+		for _, v := range files {
+
+			if fileInfo, err := os.Stat(v); err == nil {
+				if fileInfo.IsDir() && !strings.Contains(v, "/curls") {
+					utils.ThrowLog(strings.ReplaceAll(v, "pages/", ""))
+				}
+			}
+		}
 
 	},
 }

@@ -5,11 +5,18 @@
 ```
 git clone https://github.com/rajnandan1/doximus.git
 cd doximus
+```
+#### Install Doximus
+```
 go mod tidy
 go install doximus
-doximus build macos
+```
+#### Start Doximus
+```
+doximus build macos #macos, linux, win.exe
 doximus serve 5000
 ```
+
 ### How to start
 Name your site
 ```
@@ -39,7 +46,7 @@ doximus pages /your/absolute/path/pages
 Each page of doximus must have the following files
 
 ### Image Folder
-You will add your images in this folder which will be picked up during building of the pages. Your pages can refer this images using `images/myimage.png`
+You will add your images in this folder which will be picked up during building of the pages. Your pages can refer this images using `/images/myimage.png`
 Additionally you can add a favicon.ico 
 ```
 images/

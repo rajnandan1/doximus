@@ -16,6 +16,7 @@ limitations under the License.
 package cmd
 
 import (
+	"doximus/utils"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -63,22 +64,23 @@ func init() {
 func initConfig() {
 	home, err := os.Getwd()
 	cobra.CheckErr(err)
-	var websiteMap = Website{
+	var websiteMap = utils.Website{
 		Title: "Doximus - Static API Documentation",
 		Logo:  "images/logo.png",
+		Pages: "pages",
 	}
 
-	if !itExists("./site/files") {
+	if !utils.ItExists("./site/files") {
 		os.Mkdir("./site/files", 0777)
 	}
-	if !itExists("./site/assets/images") {
+	if !utils.ItExists("./site/assets/images") {
 		os.Mkdir("./site/assets/images", 0777)
 	}
-	if !itExists("./site/site.yaml") {
+	if !utils.ItExists("./site/site.yaml") {
 		file, err := yaml.Marshal(websiteMap)
-		throwError(err)
+		utils.ThrowError(err)
 		err = ioutil.WriteFile("./site/site.yaml", file, 0777)
-		throwError(err)
+		utils.ThrowError(err)
 	}
 	cobra.CheckErr(err)
 

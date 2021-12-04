@@ -16,6 +16,7 @@ limitations under the License.
 package cmd
 
 import (
+	"doximus/utils"
 	"encoding/json"
 	"errors"
 	"io/ioutil"
@@ -34,21 +35,21 @@ var buildCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		//read the site file
 		dat, err := ioutil.ReadFile("./site/site.yaml")
-		throwError(err)
-		var websiteMap = Website{}
+		utils.ThrowError(err)
+		var websiteMap = utils.Website{}
 		err = yaml.Unmarshal(dat, &websiteMap)
-		throwError(err)
+		utils.ThrowError(err)
 
 		siteLoc := websiteMap.Pages
 		if siteLoc == "" {
 			err = errors.New("no pages found")
-			throwError(err)
+			utils.ThrowError(err)
 		}
 		imageGen, _ := identicon.New(
 			"doximusmaindoc",
 			5,
 			4,
-			identicon.SetBackgroundColorFunction(transparentBg()),
+			identicon.SetBackgroundColorFunction(utils.TransparentBg()),
 		)
 		splitted := strings.Split(siteLoc, "/")
 		lastFolder := strings.Join(splitted[0:(len(splitted)-1)], "/")
@@ -56,14 +57,14 @@ var buildCmd = &cobra.Command{
 		if len(args) > 0 {
 			mode = args[0]
 		}
-		clearGenratedFiles("./site/assets/images", "doximus")
-		clearGenratedFiles("./site/files", "docs.")
-		createdocs(siteLoc, imageGen, lastFolder, mode)
-		writeDocs()
+		utils.ClearGenratedFiles("./site/assets/images", "doximus")
+		utils.ClearGenratedFiles("./site/files", "docs.")
+		utils.Createdocs(siteLoc, imageGen, lastFolder, mode)
+		utils.WriteDocs()
 		file, err := json.MarshalIndent(websiteMap, "", " ")
-		throwError(err)
+		utils.ThrowError(err)
 		err = ioutil.WriteFile("./site/files/doximussite.json", file, 0644)
-		throwError(err)
+
 	},
 }
 

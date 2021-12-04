@@ -16,6 +16,8 @@ limitations under the License.
 package cmd
 
 import (
+	"doximus/utils"
+	"io"
 	"path/filepath"
 	"text/template"
 
@@ -24,12 +26,28 @@ import (
 	"github.com/spf13/cobra"
 )
 
+type TemplateRenderer struct {
+	Templates    *template.Template
+	AssetVersion string
+	AssetURL     string
+}
+
+// Render renders a template document
+func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+	// Add global methods if data is a map
+	if viewContext, isMap := data.(map[string]interface{}); isMap {
+		viewContext["reverse"] = c.Echo().Reverse
+	}
+	return t.Templates.ExecuteTemplate(w, name, data)
+}
+
 // serveCmd represents the serve command
 var serveCmd = &cobra.Command{
 	Use:   "serve",
 	Short: "Start the server at a port",
 	Long:  `This will start a server at a specified port.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		port, _ := cmd.Flags().GetString("port")
 		e := echo.New()
 		templateDirs := []string{
 			"./site/*.html",
@@ -52,21 +70,18 @@ var serveCmd = &cobra.Command{
 		e.Use(middleware.Logger())
 		e.Use(middleware.Recover())
 		e.Static("/", "./site/assets")
-		e.POST("/api/call", Call)
-		e.GET("/", Site)
-		e.GET("/docs/*", Site)
-		e.GET("/files/:name", ResponseFile)
-		port := "5000"
-		if len(args) != 0 {
-			port = args[0]
-		}
+		e.POST("/api/call", utils.Call)
+		e.GET("/", utils.Site)
+		e.GET("/docs/*", utils.Site)
+		e.GET("/files/:name", utils.ResponseFile)
+
 		e.Logger.Fatal(e.Start(":" + port))
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(serveCmd)
-
+	serveCmd.Flags().String("port", "5000", "Add port to serve pages")
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command

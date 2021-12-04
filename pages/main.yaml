@@ -1,3 +1,12 @@
-title: Hello World
-description: A developer friendly way to host your apis
-logo: 'images/logo.png'
+title: Doximus Documentation 
+description: A developer friendly way to document your apis
+logo: https://res.cloudinary.com/socialcity/image/upload/v1638598223/logo_t3jxcy.png
+slug: ""
+tags:
+    - gandalf
+    - aragon
+    - legolas
+subpages: []
+id: ""
+curls: []
+hasAPI: false
