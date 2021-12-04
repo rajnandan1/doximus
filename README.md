@@ -1,158 +1,158 @@
-### Installation
+## Installation
 - go 1.16 minimum
 
-#### Clone Repo
+## Clone Repo
 ```
 git clone https://github.com/rajnandan1/doximus.git
 cd doximus
 ```
-#### Install Doximus
+## Install Doximus
 ```
 go mod tidy
 go install doximus
 ```
-#### Start Doximus
+## Build Pages
+**MacOS**
 ```
-doximus build macos #macos, linux, win.exe
-doximus serve 5000
+doximus build macos 
 ```
+**Linux**
+```
+doximus build linux 
+```
+**Windows**
+```
+doximus build win.exe
+```
+## Run Server
+```
+doximus serve --port 4099
+```
+## Limitations
+- Only JSON requests
+- Only Rest APIs
+- GET, PUT, DELETE, POST
 
-### How to start
-Name your site
-```
-doximus title "My awesome API"
-```
+## Features
+- Easy to Use
+- Dynamic Path params
+- Updates all requests with same variable name. That is if an api returns suppose `user_id` it will be replaced in all subsequent requests wherever present
+- Google searchable
+- Site search
 
-Describe your site
-```
-doximus desc "My awesome site description"
-```
+## Images
+Use images folder to add your images. `favicon.ico` can be added in images folder
+## Pages
+All pages are present in pages folder. Root of `pages` is the home / landing page
+## Doximus CLI
+Doximus provides a useful cli commands to help you create your pages. You can also directly edit pages folder.
 
-Add your site logo
-```
-doximus logo "https://logo.clearbit.com/example.com.au"
-```
-Add your site tags for seo purposes
-```
-doximus tags "awesome" "api docs"
-```
-Add path to folder where your pages are
-```
-doximus pages pages
-or
-doximus pages /your/absolute/path/pages
-```
-## How to create a page
-Each page of doximus must have the following files
-
-### Image Folder
-You will add your images in this folder which will be picked up during building of the pages. Your pages can refer this images using `/images/myimage.png`
-Additionally you can add a favicon.ico 
-```
-images/
-	yourimage.png //these are logos that you might need. You can use them in your pages
-	someimage.png
-	logo.png //this is your site logo. This is predefined
-	favicon.ico //this is your favicon. This is predefined
-```
-### Pages folder
-This is the folder tha will have your apis and pages. The root of this folder becomes your home page and other subfolders become your subpages of the home page.
-Each folder along with the root folder has to have a main.yaml file 
-If you want multiple depth then you can use `.` to assign parent for subpage
-##### Example of **one** level site
+---
+## Set up Layout
+Add logo for site
 
 ```
-pages/
-    main.yaml
-    bilbo/
-        main.yaml
-    sam/
-        main.yaml
-    frodo/
-        main.yaml
+doximus site --logo="https://icons-for-free.com/iconfiles/png/512/gollum+lord+of+the+rings+smeagol+icon-1320166691516135718.png"
 ```
-##### Example of **two** level site
+or put image in `images` folder. Example myimage.png
 ```
-pages/
-    main.yaml
-    bilbo/
-        main.yaml
-    bilbo.sam/
-        main.yaml
-    bilbo.frodo/
-        main.yaml
+doximus site --logo="/images/myimage.png"
 ```
-##### Example of **three** level site
+Add Description for site
 ```
-pages/
-    main.yaml
-    bilbo/
-        main.yaml
-    bilbo.sam/
-        main.yaml
-    bilbo.sam.frodo/
-        main.yaml
+doximus site --desc="A wizard is never late, Frodo Baggins. Nor is he early. He arrives precisely when he means to."
 ```
-#### Allowed files of a Page
-- main.yaml (`required`)
-- api.yaml 
-- content.md or content.html
-- curls/  (`required` if api.yaml is present)
-    - example.yaml
-    - example2.yaml
-#### main.yaml `Required`
+Add title for site
+```
+doximus site --title="Middle Earth APIs"
+```
+Add tags for site
+```
+doximus site --tags=frodo,bilbo,sam,pippin,mary
+```
+---
+## Modify Home Page
+Add image. If not specified it will be auto generated
+```
+doximus add page --logo="/images/gandalf.png"
+```
+Add a small paragraph for site
+```
+doximus add page --desc="May it be your light in the darkness; when all other lights go out."
+```
+Add heading
+```
+doximus add page --title="The Shire"
+```
+Add tags
+```
+doximus add page --tags=gandalf,aragon,legolas
+```
+Add content
+```
+doximus add content --mode=new --type=html
+```
+- `mode` can be new or append 
+- `type` can be html or md
 
-| name      | detail           | example                                                                                                                 | required |
-|-------------|------------------|-------------------------------------------------------------------------------------------------------------------------|----------|
-| title       | page title       | My Page                                                                                                                 | yes      |
-| description | page description | A developer friendly way to host your apis                                                                              | no       |
-| logo        | logo of page     | add url of image or place image in images folder and add reference. example images/mylogo.png or http://ex.com/logo.png | no       |
-| tags        | tags for page    | myapi, my api, awesome api.                                                                                             | no       |
-#### api.yaml  
-| *name*        | detail                       | example                                                                                                                 | required |
-|---------------|------------------------------|-------------------------------------------------------------------------------------------------------------------------|----------|
-| title         | page title `string`          | My Page                                                                                                                 | yes      |
-| description   | description of api `string`  | A developer friendly way to host your apis                                                                              | no       |
-| logo          | logo of page `string`        | add url of image or place image in images folder and add reference. example images/mylogo.png or http://ex.com/logo.png | no       |
-| domains       | domains for api. `array`     | - api.example.com <br /> - sandbox.example.com                                                                          | no       |
-| apis          | detail for each api `object` | example below                                                                                                           | yes      |
-| configurables | configurable params `array`  | example below                                                                                                           | no       |
-##### apis
+---
+## View pages
+```
+doximus pages
+```
+## Add a new page
+To create a new page with a specified id
+```
+doximus add page --id=lotr
+```
+add logo
+```
+doximus add page --id=lotr --logo="images/legolas.png"
+```
+add description
+```
+doximus add page --id=lotr --desc="Smoke rises from the Mountain of Doom, the hour grows late, and Gandalf the Grey  rides to Isengard seeking my counsel. For that is why you have come, is it not?"
+```
+add title
+```
+doximus add page --id=lotr --title="Lord of the Rings"
+```
+add tags
+```
+doximus add page --id=lotr --tags=your,tags
+```
+add content
+```
+doximus add content --id=lotr --mode=new --type=html
+```
+---
+## Add apis to a page
+add title of the api
+```
+doximus add api --id=lotr --title="The API"
+```
+add description of the api
+```
+doximus add page --id=lotr --desc="Gandalf, my old friend, this will be a night to remember."
+```
+add image for the api
+```
+doximus add page --id=lotr --logo="images/frodo.png"
+```
+add domains for api
+```
+doximus add page --id=lotr --domains=the-one-api.dev,goole.com
+```
+add a curl for the api
+```
+doximus add curl --id=lotr --title="book by id" --desc="use this api to get all the books with ids"
+```
+Here you will be prompted to copy paste a curl
 
+---
+## Add api variables
+variables becomes input and will be applied in whole api
 ```
-apis: 
-  -
-    title: "Create Order"
-    description: Irure labore ipsum dolore excepteur aliqua ea sit sint excepteur ut commodo consequat.
-    path: "/orders"
-    method: "POST"
-  -
-    title: "Get Order"
-    description: Lorem esse veniam enim voluptate cillum esse commodo culpa aute.
-    path: "/orders"
-    method: "GET"
-  -
-    title: "Create Refund"
-    description: Minim deserunt ea nisi nisi eu officia officia ea occaecat irure fugiat Lorem aute quis.
-    path: "/refunds"
-    method: "POST"
-  -
-    title: "GET Refund by id"
-    description: Id sint deserunt minim minim laborum elit ad cupidatat sunt proident irure reprehenderit laborum.
-    path: "/refunds/:refund_id"
-    method: "GET"
+doximus add variable --id=lotr --title="Authorization" --desc="this is api key" --required=false --value=""
 ```
-##### configurables
-```
-configurables:
-  - 
-    title: x-client-id
-    description: your client id
-    required: true
-    init: enter a value
-  -
-    title: x-client-secret
-    description: your secret key
-    required: true
-    init: enter a value
-```
+
