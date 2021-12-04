@@ -26,7 +26,7 @@ doximus build win.exe
 ```
 ## Run Server
 ```
-doximus serve --port 4099
+doximus serve --port=4099
 ```
 ## Limitations
 - Only JSON requests
