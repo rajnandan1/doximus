@@ -11,5 +11,5 @@ RUN go mod download
 COPY . .
 
 RUN ["go", "install", "doximus"]
-EXPOSE 80
-CMD ["doximus", "serve" ,"--port=80"]
+EXPOSE 8080
+CMD ["doximus", "serve" ,"--port=8080"]
