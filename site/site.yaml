@@ -1,10 +1,10 @@
 title: Doximus
 logo: https://res.cloudinary.com/socialcity/image/upload/v1638598223/logo_t3jxcy.png
 tags:
-    - frodo
-    - bilbo
-    - sam
-    - pippin
-    - mary
+    - doximus
+    - api documentation
+    - static site generator
+    - readme
+    - gitbook
 description: My awesome site description
 pages: pages
