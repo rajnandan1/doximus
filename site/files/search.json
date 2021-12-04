@@ -1,0 +1,130 @@
+[
+ {
+  "title": "The API",
+  "description": "Gandalf, my old friend, this will be a night to remember.",
+  "logo": "https://img.icons8.com/color/96/000000/frodo.png",
+  "slug": "/docs/lotr#api",
+  "parent": "docs.lotr",
+  "type": "API Reference"
+ },
+ {
+  "title": "Get Books",
+  "description": "API to fetch all books",
+  "logo": "/images/doximus2814991695.png",
+  "slug": "/docs/lotr#apigetbooks",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Book by ID",
+  "description": "API to fetch book by id",
+  "logo": "/images/doximus3879162520.png",
+  "slug": "/docs/lotr#apigetbookbyid",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Chapters of a book",
+  "description": "API to fetch chapters of a book",
+  "logo": "/images/doximus2286059104.png",
+  "slug": "/docs/lotr#apigetchaptersofabook",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get all Chapters",
+  "description": "API to fetch all chapters",
+  "logo": "/images/doximus832803630.png",
+  "slug": "/docs/lotr#apigetallchapters",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Chapter by ID",
+  "description": "chapter by id",
+  "logo": "/images/doximus2598576860.png",
+  "slug": "/docs/lotr#apichapterbyid",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Characters",
+  "description": "see characters in lotr universe",
+  "logo": "/images/doximus4036668447.png",
+  "slug": "/docs/lotr#apigetcharacters",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Character by ID",
+  "description": "details about a character",
+  "logo": "/images/doximus240903432.png",
+  "slug": "/docs/lotr#apigetcharacterbyid",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Quotes",
+  "description": "dialouges by a character",
+  "logo": "/images/doximus387312284.png",
+  "slug": "/docs/lotr#apigetquotes",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get movies",
+  "description": "Movies that were made on the books",
+  "logo": "/images/doximus2523250084.png",
+  "slug": "/docs/lotr#apigetmovies",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get movie by id",
+  "description": "Movie full details",
+  "logo": "/images/doximus4043466485.png",
+  "slug": "/docs/lotr#apigetmoviebyid",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Quotes of Movie",
+  "description": "fetch movie quotes",
+  "logo": "/images/doximus3096654365.png",
+  "slug": "/docs/lotr#apigetquotesofmovie",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Quotes",
+  "description": "get quotes or dialouges",
+  "logo": "/images/doximus387312284.png",
+  "slug": "/docs/lotr#apigetquotes",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "Get Quote by ID",
+  "description": "get one quote",
+  "logo": "/images/doximus4215930013.png",
+  "slug": "/docs/lotr#apigetquotebyid",
+  "parent": "docs.lotr",
+  "type": "API"
+ },
+ {
+  "title": "The Lord of the Rings APIs",
+  "description": "Smoke rises from the Mountain of Doom, the hour grows late, and Gandalf the Grey  rides to Isengard seeking my counsel. For that is why you have come, is it not?",
+  "logo": "https://img.icons8.com/color/96/000000/legolas.png",
+  "slug": "/docs/lotr",
+  "parent": "docs",
+  "type": "Page"
+ },
+ {
+  "title": "Doximus Documentation",
+  "description": "A developer friendly way to document your apis",
+  "logo": "https://res.cloudinary.com/socialcity/image/upload/v1638598223/logo_t3jxcy.png",
+  "slug": "/",
+  "parent": "",
+  "type": "Page"
+ }
+]

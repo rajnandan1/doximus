@@ -1,0 +1,27 @@
+{
+ "title": "Doximus Documentation",
+ "description": "A developer friendly way to document your apis",
+ "logo": "https://res.cloudinary.com/socialcity/image/upload/v1638598223/logo_t3jxcy.png",
+ "slug": "/",
+ "tags": [
+  "gandalf",
+  "aragon",
+  "legolas"
+ ],
+ "subpages": [
+  {
+   "title": "The Lord of the Rings APIs",
+   "description": "Smoke rises from the Mountain of Doom, the hour grows late, and Gandalf the Grey  rides to Isengard seeking my counsel. For that is why you have come, is it not?",
+   "logo": "https://img.icons8.com/color/96/000000/legolas.png",
+   "slug": "/docs/lotr",
+   "tags": null,
+   "subpages": null,
+   "id": "",
+   "curls": null,
+   "hasAPI": true
+  }
+ ],
+ "id": "376583634",
+ "curls": [],
+ "hasAPI": false
+}

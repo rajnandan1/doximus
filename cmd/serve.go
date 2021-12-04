@@ -53,7 +53,9 @@ var serveCmd = &cobra.Command{
 		templateDirs := []string{
 			"./site/*.html",
 		}
-		port = os.Getenv("PORT")
+		if os.Getenv("PORT") != "" {
+			port = os.Getenv("PORT")
+		}
 		templateFiles := []string{}
 		for _, dir := range templateDirs {
 			ff, err := filepath.Glob(dir)
