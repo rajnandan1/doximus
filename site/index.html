@@ -10,11 +10,15 @@
 
 	 	<meta itemprop="image" content='{{index . "image"}}' />
 		<meta property="og:site_name" content='{{index . "title"}}' />
-		<meta property="og:image:secure_url" itemprop="image" content='{{index . "image"}}' />
+		<meta property="og:image" itemprop="image" content='{{index . "image"}}' />
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" itemprop="name" content='{{index . "title"}}' />
-		<meta property="og:description" itemprop="description" content='{{index . "description"}}' />
+		<meta property="og:title" content='{{index . "title"}}' />
+		<meta property="og:description"   content='{{index . "description"}}' />
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@_rajnandan_" />
+		<meta name="twitter:creator" content="@_rajnandan_" />
 
 		<title>{{index . "title"}}</title>
 
@@ -36,14 +40,14 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-8442fd56.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-d32ee1dd.js">
+		<link rel="modulepreload" href="/_app/start-1f56d3cd.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-ca95292d.js">
 		<link rel="modulepreload" href="/_app/chunks/singletons-12a22614.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/_app/assets/vendor-b5329f03.css">
 
 		<script type="module">
-			import { start } from "/_app/start-8442fd56.js";
+			import { start } from "/_app/start-1f56d3cd.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":""},

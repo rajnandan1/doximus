@@ -273,6 +273,7 @@ pre.plain{
 	border-radius: 12px;
 	height: calc(100% - 100px);
 	background: #fff;
+	max-height: 80vh;
 }
 
 .resp-body pre code {
@@ -627,3 +628,9 @@ box-shadow: none !important;
 .sidebar-wrapper .sidebar-menu ul li a.noimage{
 	padding-left: 15px !important;
 }
+ .hamburger {
+ 	position: absolute;
+ 	padding: 10px 15px;
+ 	margin-top: -2px;
+ 	border-radius: 6px;
+ }
